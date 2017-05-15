@@ -16,10 +16,10 @@ import tensorflow as tf
 import numpy as np
 
 
-train_dataset = np.loadtxt("../data/train_dataset")
-train_labels = np.loadtxt("../data/train_labels")
-test_dataset = np.loadtxt("../data/test_dataset_full.txt")
-test_labels = np.loadtxt("../data/test_labels_full.txt")
+train_dataset = np.loadtxt("../data/train_dataset_new.txt")
+train_labels = np.loadtxt("../data/train_labels_new.txt")
+test_dataset = np.loadtxt("../data/test_dataset_new.txt")
+test_labels = np.loadtxt("../data/test_labels_new.txt")
 
 # Parameters
 learning_rate = 0.0005
