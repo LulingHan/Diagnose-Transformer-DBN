@@ -1,0 +1,16 @@
+BPNN : # Parameters
+        learning_rate = 0.0005
+        training_epochs = 20
+        batch_size = 100
+        display_step = 1
+        accuracy: 65~72
+
+DBN: classifier = SupervisedDBNClassification(hidden_layers_structure=[64, 64, 64, 10],
+                                         learning_rate_rbm=0.05,
+                                         learning_rate=0.05,
+                                         n_epochs_rbm=20,
+                                         n_iter_backprop=100,
+                                         batch_size=50,
+                                         activation_function='relu',
+                                         dropout_p=0.2)
+    accuracy: 81.6321
