@@ -22,14 +22,14 @@ test_dataset = np.loadtxt("../data/test_dataset_new.txt")
 test_labels = np.loadtxt("../data/test_labels_new.txt")
 
 # Parameters
-learning_rate = 0.0005
+learning_rate = 0.005
 training_epochs = 100
 batch_size = 100
 display_step = 1
 
 # Network Parameters
 n_hidden_1 = 20 #256 # 1st layer number of features  20
-n_hidden_2 = 20  # # 2nd layer number of features  20
+n_hidden_2 = 20 # # 2nd layer number of features  20
 n_input = 9 # MNIST data input (img shape: 28*28)
 n_classes = 9 # MNIST total classes (0-9 digits)
 
@@ -81,7 +81,7 @@ with tf.Session() as sess:
     # Training cycle
     for epoch in range(training_epochs):
         avg_cost = 0.
-        total_batch = int(4056/batch_size) #int(mnist.train.num_examples/batch_size)
+        total_batch = int(3249/batch_size) #int(mnist.train.num_examples/batch_size)
         # Loop over all batches
         for i in range(total_batch):
             batch_x = train_dataset[count : count + batch_size] 
