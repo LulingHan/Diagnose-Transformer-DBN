@@ -18,7 +18,7 @@ setting = read_setting(open('setting.txt'))
 file_out = open('../result/dbn.log', 'a')
 
 
-X_train = np.loadtxt('../data/train_dataset_new')
+X_train = np.loadtxt('../data/train_dataset_new.txt')
 X_test = np.loadtxt('../data/test_dataset_new.txt')
 
 Y_train = np.array([np.argmax(row) for row in np.loadtxt('../data/train_labels_new.txt')])
@@ -45,7 +45,7 @@ print('Done.\nAccuracy: %f' % accuracy)
 
 file_out.write('\n\n-------------------------------\n\n')
 
-for line in setting_file:
+for line in open('setting.txt'):
     file_out.write(line)
 
 file_out.write(str(accuracy) + '\n')
